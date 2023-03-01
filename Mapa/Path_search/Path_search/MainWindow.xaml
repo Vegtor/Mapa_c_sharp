@@ -1,0 +1,25 @@
+﻿<Window x:Class="Hledani_cesty.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hledani_cesty"
+        mc:Ignorable="d"
+        Title="Hledání cesty" Height="450" Width="800">
+    <Grid x:Name="main_grid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="53*"/>
+            <ColumnDefinition Width="347*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="start_button" Content="Start" HorizontalAlignment="Center" Margin="0,13,0,0" Grid.Column="0" VerticalAlignment="Top" FontSize="18" Height="28" Width="80" IsEnabled="False"/>
+        <Button x:Name="obst_button" Content="Překážka" HorizontalAlignment="Center" Margin="0,58,0,0" Grid.Column="0" VerticalAlignment="Top" FontSize="18" Height="28" Width="80" IsEnabled="False"/>
+        <Button x:Name="end_button" Content="Konec" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="18" Height="28" Width="80" Margin="0,104,0,0" Grid.Column="0" IsEnabled="False"/>
+        <Label Content="X" HorizontalAlignment="Center" Margin="0,213,0,0" Grid.Column="0" VerticalAlignment="Top"/>
+        <Label Content="Velikost:" HorizontalAlignment="Center" Margin="0,151,0,0" Grid.Column="0" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name ="number_tb_y" HorizontalAlignment="Center" Margin="0,235,0,0" Grid.Column="0" TextWrapping="Wrap" FontSize="18" VerticalAlignment="Top" Width="46" PreviewTextInput="number_tb_PreviewText"/>
+        <TextBox x:Name="number_tb_x" HorizontalAlignment="Center" TextWrapping="Wrap" FontSize="18" VerticalAlignment="Top" Width="46" Margin="0,185,0,0" Grid.Column="0" PreviewTextInput="number_tb_PreviewText"/>
+        <Border BorderBrush="Black" BorderThickness="2" Grid.Column="1"/>
+        <Grid x:Name="map_grid" Grid.Column="1"/>
+        <Label x:Name="num_lbl" Content="Label" HorizontalAlignment="Center" Margin="0,320,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
